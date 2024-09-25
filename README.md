@@ -7,7 +7,7 @@ This version adds clarity and introduces both projects by name, which can help r
 
 ## Cloning MIDAZ-FULL
 ```bash
-    git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
+  git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
 ```
 
 ## Run MIDAZ all-in-one
