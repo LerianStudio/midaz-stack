@@ -66,3 +66,6 @@ This version adds clarity and introduces both projects by name, which can help r
 
   git submodule update --init --recursive --checkout
 ```
+
+## Licença
+Midaz is released under the terms of the Apache License 2.0. See COPYING for more information or see https://opensource.org/license/apache-2-0.
