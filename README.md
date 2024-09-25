@@ -9,3 +9,35 @@ This version adds clarity and introduces both projects by name, which can help r
 ```bash
   chmod +x ./make.sh && ./make.sh
 ```
+
+```bash
+  git submodule update --init --recursive --checkout
+
+  cd midaz
+
+  cd components
+
+  cd ledger
+  mv .env.example .env
+
+  cd ..
+
+  cd transaction
+  mv .env.exemple .env
+
+  cd ..
+
+  cd ..
+
+  make ledgers COMMAND="up"
+  make transaction COMMAND="up"
+
+  cd ..
+
+  cd midaz-console
+  npm run dev
+
+  docker-compose up -d
+
+  storybook dev -p 6006
+```
