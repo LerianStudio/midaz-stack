@@ -5,6 +5,11 @@ This project combines Midaz Ledger and Midaz Console into a unified all-in-one s
 
 This version adds clarity and introduces both projects by name, which can help readers understand the purpose and benefit of the combination. Let me know if you'd like to add further details!
 
+## Cloning MIDAZ-FULL
+```bash
+    git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
+```
+
 ## Run MIDAZ all-in-one
 ```bash
   git submodule update --init --recursive --checkout
