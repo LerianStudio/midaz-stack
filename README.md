@@ -7,10 +7,6 @@ This version adds clarity and introduces both projects by name, which can help r
 
 ## Run MIDAZ all-in-one
 ```bash
-  chmod +x ./make.sh && ./make.sh
-```
-
-```bash
   git submodule update --init --recursive --checkout
 
   cd midaz
@@ -40,4 +36,28 @@ This version adds clarity and introduces both projects by name, which can help r
   docker-compose up -d
 
   storybook dev -p 6006
+  
+  cd ..
+```
+
+## Stop MIDAZ all-in-one
+```bash
+  cd midaz
+
+  make ledgers COMMAND="stop"
+  make transaction COMMAND="stop"
+  
+  docker system prune -a -f
+  docker volume prune -a -f
+  
+  cd ..
+
+  cd midaz-console
+  
+  docker-compose stop
+  
+  docker system prune -a -f
+  docker volume prune -a -f
+
+  git submodule update --init --recursive --checkout
 ```
