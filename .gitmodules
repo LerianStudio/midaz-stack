@@ -1,0 +1,6 @@
+[submodule "midaz"]
+	path = midaz
+	url = git@github.com:LerianStudio/midaz.git
+[submodule "midaz-console"]
+	path = midaz-console
+	url = git@github.com:LerianStudio/midaz-console.git
