@@ -12,8 +12,10 @@ This version adds clarity and introduces both projects by name, which can help r
 
 ## Run MIDAZ all-in-one
 ```bash
+  set -e
+  
   git submodule update --init --recursive --checkout
-
+  
   cd midaz
 
   cd components
@@ -26,16 +28,17 @@ This version adds clarity and introduces both projects by name, which can help r
   cd transaction
   mv .env.exemple .env
 
-  cd ..
+  cd ../../
 
-  cd ..
-
-  make ledgers COMMAND="up"
+  make ledger COMMAND="up"
   make transaction COMMAND="up"
 
   cd ..
 
   cd midaz-console
+  
+  npm install
+  
   npm run dev
 
   docker-compose up -d
@@ -47,9 +50,11 @@ This version adds clarity and introduces both projects by name, which can help r
 
 ## Stop MIDAZ all-in-one
 ```bash
+  set -e
+  
   cd midaz
 
-  make ledgers COMMAND="stop"
+  make ledger COMMAND="stop"
   make transaction COMMAND="stop"
   
   docker system prune -a -f
