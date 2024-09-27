@@ -20,8 +20,13 @@ This version adds clarity and introduces both projects by name, which can help r
 
   cd components
 
-  cd ledger
+  cd auth
   mv .env.example .env
+
+  cd ..
+
+  cd ledger
+  mv .env.exemple .env
 
   cd ..
 
@@ -30,8 +35,7 @@ This version adds clarity and introduces both projects by name, which can help r
 
   cd ../../
 
-  make ledger COMMAND="up"
-  make transaction COMMAND="up"
+  make all-services COMMAND="up"
 
   cd ..
 
@@ -54,11 +58,7 @@ This version adds clarity and introduces both projects by name, which can help r
   
   cd midaz
 
-  make ledger COMMAND="stop"
-  make transaction COMMAND="stop"
-  
-  docker system prune -a -f
-  docker volume prune -a -f
+  make all-services COMMAND="stop"
   
   cd ..
 
