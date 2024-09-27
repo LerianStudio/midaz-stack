@@ -26,7 +26,7 @@ This version adds clarity and introduces both projects by name, which can help r
   cd ..
 
   cd ledger
-  mv .env.exemple .env
+  mv .env.example .env
 
   cd ..
 
