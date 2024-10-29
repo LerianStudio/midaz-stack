@@ -18,22 +18,7 @@ This version adds clarity and introduces both projects by name, which can help r
   
   cd midaz
 
-  cd components
-
-  cd auth
-  mv .env.example .env
-
-  cd ..
-
-  cd ledger
-  mv .env.example .env
-
-  cd ..
-
-  cd transaction
-  mv .env.exemple .env
-
-  cd ../../
+  make set-env
 
   make all-services COMMAND="up"
 
