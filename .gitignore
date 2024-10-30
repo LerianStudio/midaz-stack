@@ -1,4 +1,7 @@
-
-.idea/vcs.xml
-.idea/midaz-full.iml
-.idea/modules.xml
+.vscode
+*__debug_bin1675735721
+.DS_Store
+.env
+components/mdz/bin/mdz
+.idea
+*.iml
