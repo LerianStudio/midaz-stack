@@ -18,12 +18,12 @@ This version adds clarity and introduces both projects by name, which can help r
 
 ## Stop MIDAZ all-in-one
 ```bash
-make stop
+  make stop
 ```
 
 ## remove MIDAZ all-in-one
 ```bash
-make remove
+  make remove
 ```
 
 ## Licença
