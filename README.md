@@ -26,13 +26,11 @@ This version adds clarity and introduces both projects by name, which can help r
 
   cd midaz-console
   
-  npm install
+  npm run set-local-env
   
   npm run dev
-
-  docker-compose up -d
-
-  storybook dev -p 6006
+  
+  npm run docker-compose
   
   cd ..
 ```
