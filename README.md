@@ -8,51 +8,22 @@ This version adds clarity and introduces both projects by name, which can help r
 ## Cloning MIDAZ-FULL
 ```bash
   git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
+  cd midaz-full
 ```
 
 ## Run MIDAZ all-in-one
 ```bash
-  set -e
-  
-  git submodule update --init --recursive --checkout
-  
-  cd midaz
-
-  make set-env
-
-  make all-services COMMAND="up"
-
-  cd ..
-
-  cd midaz-console
-  
-  npm run set-local-env
-  
-  npm run dev
-  
-  npm run docker-compose
-  
-  cd ..
+  make up
 ```
 
 ## Stop MIDAZ all-in-one
 ```bash
-  set -e
-  
-  cd midaz
+make stop
+```
 
-  make all-services COMMAND="stop"
-  
-  cd ..
-
-  cd midaz-console
-  
-  docker-compose stop
-  
-  docker system prune -a -f
-  docker volume prune -a -f
-
-  git submodule update --init --recursive --checkout
+## remove MIDAZ all-in-one
+```bash
+make remove
 ```
 
 ## Licença
