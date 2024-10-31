@@ -5,6 +5,28 @@ This project combines Midaz Ledger and Midaz Console into a unified all-in-one s
 
 This version adds clarity and introduces both projects by name, which can help readers understand the purpose and benefit of the combination.
 
+## Prerequisites
+* [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Docker](https://docs.docker.com/get-started/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/t)
+* [Node.Js and npm](https://nodejs.org/en/download/package-manager) >= v18.x.x
+* Makefile:
+
+#### Linux:
+```bash
+sudo apt install make
+```
+
+#### Windows:
+```bash
+choco install make
+```
+
+#### Mac:
+```bash
+brew install make
+```
+
 ## Cloning MIDAZ-FULL
 ```bash
   git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
