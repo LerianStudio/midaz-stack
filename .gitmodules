@@ -4,6 +4,3 @@
 [submodule "midaz-console"]
 	path = midaz-console
 	url = git@github.com:LerianStudio/midaz-console.git
-[submodule "midaz-test"]
-	path = midaz-test
-	url = https://github.com/LerianStudio/midaz-test
