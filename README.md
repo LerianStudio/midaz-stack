@@ -1,4 +1,4 @@
-# midaz-full
+# midaz-stack
 
 Midaz All-in-One Suite
 This project combines Midaz Ledger and Midaz Console into a unified all-in-one solution. It integrates the capabilities of both projects, providing a seamless experience for managing and interacting with your ledger in a single platform.
@@ -27,10 +27,10 @@ choco install make
 brew install make
 ```
 
-## Cloning MIDAZ-FULL
+## Cloning MIDAZ-STACK
 ```bash
-  git clone --recurse-submodules git@github.com:LerianStudio/midaz-full.git
-  cd midaz-full
+  git clone --recurse-submodules git@github.com:LerianStudio/midaz-stack.git
+  cd midaz-stack
 ```
 
 ## Run MIDAZ all-in-one
