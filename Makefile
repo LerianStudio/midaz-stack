@@ -14,7 +14,7 @@ up:
 	@echo "Initiating all services..."
 	@set -e
 	@cd midaz && make set-env && make all-services COMMAND="up"
-	@cd midaz-console && npm update && npm run docker-compose
+	@cd midaz-console && npm update && npm run docker-up
 	@echo "Services initiated successfully"
 
 stop:
