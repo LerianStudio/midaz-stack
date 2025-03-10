@@ -26,16 +26,10 @@ define check_command
 	fi
 endef
 
-# Check if environment files exist
+# Create midaz environment file
 define check_env_files
-	@missing=false; \
-	if [ ! -f "$(MIDAZ_CONSOLE_DIR)/.env" ]; then \
-		missing=true; \
-	fi; \
-	if [ "$$missing" = "true" ]; then \
-		echo "$(YELLOW)Environment files are missing. Setting up environment files...$(NC)"; \
-		cd $(MIDAZ_DIR) && make set-env; \
-	fi
+	echo "$(YELLOW)Setting up midaz environment file...$(NC)"; \
+	cd $(MIDAZ_DIR) && make set-env;
 endef
 
 # Core Commands
