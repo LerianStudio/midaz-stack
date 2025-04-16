@@ -67,9 +67,8 @@ up:
 	$(call title1,"STARTING ALL SERVICES")
 	$(call check_command,docker,"Install Docker from https://docs.docker.com/get-docker/")
 	$(call check_env_files)
-	@echo "$(BLUE)Setting up and starting Midaz services...$(NC)"
-	@cd $(MIDAZ_DIR) && make all-services COMMAND="up"
-	@echo "$(BLUE)Setting up and starting Midaz Console...$(NC)"
+	@cd $(MIDAZ_DIR) && make up
+	@echo "$(BLUE)Starting Midaz Console...$(NC)"
 	@cd $(MIDAZ_CONSOLE_DIR) && npm update && npm run docker-up
 	@echo "$(GREEN)$(BOLD)[ok]$(NC) All services started successfully$(GREEN) ✔️$(NC)"
 
@@ -79,7 +78,7 @@ stop:
 	$(call title1,"STOPPING ALL SERVICES")
 	$(call check_command,docker,"Install Docker from https://docs.docker.com/get-docker/")
 	@echo "$(BLUE)Stopping Midaz services...$(NC)"
-	@cd $(MIDAZ_DIR) && make all-services COMMAND="stop"
+	@cd $(MIDAZ_DIR) && make stop
 	@echo "$(BLUE)Stopping Midaz Console...$(NC)"
 	@cd $(MIDAZ_CONSOLE_DIR) && $(DOCKER_CMD) stop
 	@echo "$(GREEN)$(BOLD)[ok]$(NC) All services stopped successfully$(GREEN) ✔️$(NC)"
@@ -90,7 +89,7 @@ down:
 	$(call title1,"DOWNING ALL SERVICES")
 	$(call check_command,docker,"Install Docker from https://docs.docker.com/get-docker/")
 	@echo "$(BLUE)Downing Midaz services...$(NC)"
-	@cd $(MIDAZ_DIR) && make all-services COMMAND="down"
+	@cd $(MIDAZ_DIR) && make down
 	@echo "$(BLUE)Downing Midaz Console...$(NC)"
 	@cd $(MIDAZ_CONSOLE_DIR) && $(DOCKER_CMD) down
 	@echo "$(GREEN)$(BOLD)[ok]$(NC) All services downed successfully$(GREEN) ✔️$(NC)"
@@ -165,6 +164,8 @@ midaz-help:
 	@echo "  stop                        - Stop all Midaz containers"
 	@echo "  restart                     - Restart all Midaz containers"
 	@echo "  rebuild-up                  - Rebuild and restart all Midaz services"
+	@echo "  clean-docker                - Clean all Docker resources (containers, networks, volumes)"
+	@echo "  destroy                     - Alias for clean-docker (maintained for compatibility)"
 	@echo ""
 
 .PHONY: midaz-console-help
